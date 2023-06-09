@@ -5,6 +5,7 @@ from compress_pdf import compress_pdf
 from word_to_pdf import convert_word_to_pdf
 import ocr_handler
 import threading
+from split_pdf import SplitPDFPanel, SplitPDFFrame
 
 class MainFrame(wx.Frame):
     def __init__(self, parent):
@@ -13,13 +14,14 @@ class MainFrame(wx.Frame):
         
         # Crear controles de interfaz
         action_label = wx.StaticText(panel, label="¿Qué acción deseas realizar?")
-        self.action_choice = wx.Choice(panel, choices=["Convertir de Word a PDF", "Combinar PDF", "Comprimir PDF", "Convertir de PDF a Word", "OCR"])
+        self.action_choice = wx.Choice(panel, choices=["Convertir de Word a PDF", "Combinar PDF", "Comprimir PDF", "Convertir de PDF a Word", "OCR", "dividir pdf"])
         
         self.word_to_pdf_button = wx.Button(panel, label="Convertir de Word a PDF")
         self.combine_pdf_button = wx.Button(panel, label="Combinar PDF")
         self.compress_pdf_button = wx.Button(panel, label="Comprimir PDF")
         self.pdf_to_word_button = wx.Button(panel, label="Convertir de PDF a Word")
         self.ocr_button = wx.Button(panel, label="OCR")
+        self.split_pdf_button = wx.Button(panel, label="Dividir PDF")
         
         # Barra de progreso
         self.progress_bar = wx.Gauge(panel, range=100, style=wx.GA_HORIZONTAL)
@@ -36,6 +38,7 @@ class MainFrame(wx.Frame):
         sizer.Add(self.compress_pdf_button, 0, wx.EXPAND | wx.ALL, 10)
         sizer.Add(self.pdf_to_word_button, 0, wx.EXPAND | wx.ALL, 10)
         sizer.Add(self.ocr_button, 0, wx.EXPAND | wx.ALL, 10)
+        sizer.Add(self.split_pdf_button, 0, wx.EXPAND | wx.ALL, 10)
         sizer.Add(self.progress_bar, 0, wx.EXPAND | wx.ALL, 10)
         sizer.Add(self.exit_button, 0, wx.EXPAND | wx.ALL, 10)
         
@@ -47,7 +50,9 @@ class MainFrame(wx.Frame):
         self.compress_pdf_button.Bind(wx.EVT_BUTTON, self.on_compress_pdf_button)
         self.pdf_to_word_button.Bind(wx.EVT_BUTTON, self.on_pdf_to_word_button)
         self.ocr_button.Bind(wx.EVT_BUTTON, self.on_ocr_button)
+        self.split_pdf_button.Bind(wx.EVT_BUTTON, self.on_split_pdf_button)
         self.exit_button.Bind(wx.EVT_BUTTON, self.on_exit_button)
+
         
     def execute_in_thread(self, function):
         thread = threading.Thread(target=function)
@@ -138,22 +143,20 @@ class MainFrame(wx.Frame):
                         ocr_handler.perform_ocr_save_txt(image_file, output_file)
                         self.progress_bar.SetValue(100)  # Completar la barra de progreso
         
+
+
         self.execute_in_thread(ocr_thread)
-        
-    def on_exit_button(self, event):
-        self.Close()  # Cerrar la aplicación
     
-    def execute_in_thread(self, target):
-        import threading
-        
-        thread = threading.Thread(target=target)
-        thread.start()
-        
-def main():
+    def on_split_pdf_button(self, event):
+        split_frame = SplitPDFFrame()
+        split_frame.Show()
+    
+    def on_exit_button(self, event):
+        self.Close()
+
+
+if __name__ == "__main__":
     app = wx.App()
     frame = MainFrame(None)
     frame.Show()
     app.MainLoop()
-
-if __name__ == "__main__":
-    main()
