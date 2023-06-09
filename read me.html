@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto ITPdf</title>
+
+  <meta charset="UTF-8">
+
+</head>
+<body>
+  <h1>Proyecto ITPdf</h1>
+  <p>Herramienta Python para operaciones con archivos PDF y Word, con una interfaz gráfica basada en wxPython.</p>
+  <h2>Descripción</h2>
+  <p>El Proyecto ITPdf es una aplicación que permite realizar diversas operaciones con archivos PDF y Word de manera sencilla y eficiente. Esta versión incluye una interfaz gráfica desarrollada utilizando la biblioteca wxPython, lo que proporciona una experiencia accesible y amigable para el usuario.</p>
+  <h2>Clonar el Repositorio</h2>
+  <p>Para clonar el repositorio, utiliza el siguiente comando:</p>
+  <pre><code>git clone [https://github.com/nestorjosed/ITPdf.git]</code></pre>
+  <h2>Uso</h2>
+  <ol>
+    <li>Ejecuta el archivo principal <code>main.py</code>.</li>
+    <li>Se mostrará una interfaz gráfica con diferentes acciones disponibles.</li>
+    <li>Selecciona la acción deseada haciendo clic en el botón correspondiente (Convertir de Word a PDF, Combinar PDF, Comprimir PDF, Convertir de PDF a Word, OCR).</li>
+    <li>Sigue las instrucciones en pantalla y utiliza los cuadros de diálogo para seleccionar los archivos de entrada y salida según sea necesario.</li>
+    <li>La aplicación realizará la acción seleccionada y generará el archivo resultante.</li>
+  </ol>
+  <h2>Accesos Rápidos</h2>
+  <ul>
+    <li>Acción para convertir de Word a PDF: Haz clic en el botón "Convertir de Word a PDF".</li>
+    <li>Acción para combinar archivos PDF: Haz clic en el botón "Combinar PDF".</li>
+    <li>Acción para comprimir archivo PDF: Haz clic en el botón "Comprimir PDF".</li>
+    <li>Acción para convertir de PDF a Word: Haz clic en el botón "Convertir de PDF a Word".</li>
+    <li>Acción para realizar OCR en una imagen: Haz clic en el botón "OCR".</li>
+  </ul>
+  <h2>Diálogos de Archivos</h2>
+  <p>Durante el uso de la aplicación, se mostrarán cuadros de diálogo de archivos para seleccionar los archivos de entrada y salida. Estos cuadros de diálogo permiten navegar y seleccionar los archivos correspondientes de manera intuitiva.</p>
+  <h2>Funciones del Proyecto ITPdf</h2>
+  <p>El programa del Proyecto ITPdf cuenta con varias funciones que permiten realizar distintas operaciones con archivos PDF y Word. A continuación, se explica cada función y cómo funciona:</p>
+  <ol>
+    <li><code>convert_word_to_pdf(word_file, output_file)</code>: Esta función convierte un archivo de Word a formato PDF. Recibe la ruta del archivo de Word de entrada (<code>word_file</code>) y la ruta de salida para el archivo PDF resultante (<code>output_file</code>). Utiliza la librería <code>python-docx</code> para leer el contenido del archivo de Word y la librería <code>PyPDF4</code> para generar el archivo PDF.</li>
+    <li><code>merge_pdfs(input_files, output_file)</code>: Esta función combina varios archivos PDF en uno solo. Recibe una lista de rutas de archivos PDF de entrada (<code>input_files</code>) y la ruta de salida para el archivo PDF combinado (<code>output_file</code>). Utiliza la librería <code>PyPDF4</code> para realizar la combinación de los archivos PDF.</li>
+    <li><code>compress_pdf(input_file, output_file)</code>: Esta función comprime un archivo PDF. Recibe la ruta del archivo PDF de entrada (<code>input_file</code>) y la ruta de salida para el archivo PDF comprimido (<code>output_file</code>). Utiliza la librería <code>PyPDF4</code> para reducir el tamaño del archivo PDF sin perder la calidad del contenido.</li>
+    <li><code>convert_pdf_to_word(pdf_file, output_file)</code>: Esta función convierte un archivo PDF a formato Word (docx). Recibe la ruta del archivo PDF de entrada (<code>pdf_file</code>) y la ruta de salida para el archivo de Word resultante (<code>output_file</code>). Utiliza la librería <code>pdf2docx</code> para extraer el texto del PDF y generar el archivo de Word.</li>
+    <li><code>perform_ocr(image_file)</code>: Esta función realiza reconocimiento óptico de caracteres (OCR) en una imagen y devuelve el texto extraído. Recibe la ruta de la imagen (<code>image_file</code>). Utiliza la librería <code>pytesseract</code> en combinación con la librería <code>PIL</code> (Python Imaging Library) para realizar el OCR.</li>
+  </ol>
+  <h2>Resultados</h2>
+  <p>Los resultados de cada función dependen de la operación realizada. Por ejemplo, al convertir de Word a PDF, se generará un archivo PDF que representa el contenido del archivo de Word. Al combinar archivos PDF, se generará un nuevo archivo PDF que contiene todas las páginas de los archivos de entrada. Al comprimir un PDF, se generará un nuevo archivo PDF con un tamaño reducido. Al convertir de PDF a Word, se generará un archivo de Word con el texto extraído del archivo PDF. Al realizar OCR en una imagen, se obtendrá el texto extraído de la imagen.</p>
+  <h2>Descargo de Responsabilidad</h2>
+  <p>El Proyecto ITPdf se proporciona tal cual, sin garantías de ningún tipo, expresas o implícitas. El uso de esta aplicación es bajo tu propio riesgo. No nos hacemos responsables de ningún daño o pérdida causados por el uso de esta aplicación.</p>
+  <h2>Contacto</h2>
+  <p>Para cualquier consulta o comentario, puedes contactarme a través de las siguientes vías:</p>
+  <ul>
+    <li>Twitter: <a href="https://twitter.com/nestorjosedf">@nestorjosedf</a></li>
+    <li>Correo electrónico: androidnjdb@gmail.com</li>
+  </ul>
+  <p>Esperamos que el Proyecto ITPdf sea útil en tus tareas relacionadas con archivos PDF y Word. Si tienes alguna pregunta adicional, no dudes en preguntar.</p>
+</body>
+</html>
