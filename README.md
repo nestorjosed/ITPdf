@@ -1,15 +1,16 @@
 # Proyecto ITPdf
 
-Herramienta Python para operaciones con archivos PDF y Word.
+Herramienta Python para operaciones con archivos PDF y Word, con una interfaz gráfica basada en wxPython.
 
 ## Descripción
 
-El Proyecto ITPdf es una aplicación de línea de comandos que permite realizar diversas operaciones con archivos PDF y Word.
+El Proyecto ITPdf es una aplicación que permite realizar diversas operaciones con archivos PDF y Word de manera sencilla y eficiente. Esta versión incluye una interfaz gráfica desarrollada utilizando la biblioteca wxPython, lo que proporciona una experiencia accesible y amigable para el usuario.
 
 ## Clonar el Repositorio
 
 Para clonar el repositorio, utiliza el siguiente comando:
 
+git clone [https://github.com/nestorjosed/ITPdf.git]
 
 
 ## Uso
@@ -17,22 +18,22 @@ Para clonar el repositorio, utiliza el siguiente comando:
 Para utilizar el Proyecto ITPdf, sigue los siguientes pasos:
 
 1. Ejecuta el archivo principal `main.py`.
-2. Se mostrará un menú con diferentes acciones disponibles.
-3. Selecciona la acción deseada ingresando el código correspondiente (w: convertir de Word a PDF, c: combinar PDF, p: comprimir PDF, r: convertir de PDF a Word, i: OCR).
-4. Sigue las instrucciones y utiliza los cuadros de diálogo para seleccionar los archivos de entrada y salida según sea necesario.
+2. Se mostrará una interfaz gráfica con diferentes acciones disponibles.
+3. Selecciona la acción deseada haciendo clic en el botón correspondiente (Convertir de Word a PDF, Combinar PDF, Comprimir PDF, Convertir de PDF a Word, OCR).
+4. Sigue las instrucciones en pantalla y utiliza los cuadros de diálogo para seleccionar los archivos de entrada y salida según sea necesario.
 5. La aplicación realizará la acción seleccionada y generará el archivo resultante.
 
-## Teclas de Acceso Rápido
+## Accesos Rápidos
 
-- Acción para convertir de Word a PDF: Presiona `w`.
-- Acción para combinar archivos PDF: Presiona `c`.
-- Acción para comprimir archivo PDF: Presiona `p`.
-- Acción para convertir de PDF a Word: Presiona `r`.
-- Acción para realizar OCR en una imagen: Presiona `i`.
+- Acción para convertir de Word a PDF: Haz clic en el botón "Convertir de Word a PDF".
+- Acción para combinar archivos PDF: Haz clic en el botón "Combinar PDF".
+- Acción para comprimir archivo PDF: Haz clic en el botón "Comprimir PDF".
+- Acción para convertir de PDF a Word: Haz clic en el botón "Convertir de PDF a Word".
+- Acción para realizar OCR en una imagen: Haz clic en el botón "OCR".
 
 ## Diálogos de Archivos
 
-Durante el uso de la aplicación, se mostrarán cuadros de diálogo de archivos para seleccionar los archivos de entrada y salida. Estos cuadros de diálogo permiten navegar y seleccionar los archivos correspondientes.
+Durante el uso de la aplicación, se mostrarán cuadros de diálogo de archivos para seleccionar los archivos de entrada y salida. Estos cuadros de diálogo permiten navegar y seleccionar los archivos correspondientes de manera intuitiva.
 
 ## Funciones del Proyecto ITPdf
 
@@ -56,8 +57,11 @@ Los resultados de cada función dependen de la operación realizada. Por ejemplo
 
 El Proyecto ITPdf se proporciona tal cual, sin garantías de ningún tipo, expresas o implícitas. El uso de esta aplicación es bajo tu propio riesgo. No nos hacemos responsables de ningún daño o pérdida causados por el uso de esta aplicación.
 
-## Requisitos
+## Contacto
 
-Recuerda tener instalado Python 3.x y los módulos necesarios (tkinter, python-docx, PyPDF4, pdf2docx, pytesseract, PIL) para ejecutar el proyecto.
+Para cualquier consulta o comentario, puedes contactarme a través de las siguientes vías:
+
+- Twitter: [@nestorjosedf](https://twitter.com/nestorjosedf)
+- Correo electrónico: androidnjdb@gmail.com
 
 Esperamos que el Proyecto ITPdf sea útil en tus tareas relacionadas con archivos PDF y Word. Si tienes alguna pregunta adicional, no dudes en preguntar.
